@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="IconImg/icon.png">
+    <script src="https://kit.fontawesome.com/c6c61a3b0a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/introjs.min.css">
+    <link rel="stylesheet" href="schedule.css">
+    <title>Schedule</title>
+</head>
+<body>
+
+
+    <div class="wrapper">
+
+        <div class="navbar">
+
+            <a href="hompage.html">Home</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+
+        </div>
+
+        
+        <div class="header">
+
+            <h1>Schedule</h1>
+
+        </div>
+
+        <div class="search">
+            <div class="searchbar-here" id="srch" onclick="toggleSearchBar()">
+                <input type="text" id="find" placeholder="search here...." onkeyup="search('tablesched', 'find')">
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="tablesched1">
+
+            <div class="tablesched-list1">
+    
+                <table class="table">
+                    <thead>    
+                    <tr>
+    
+                        <th>Bus No.</th>
+                        <th>Bus Name</th>
+                        <th>Depart</th>
+                        <th>Depart Time</th>
+                        <th>Arrive</th>
+                        <th>Arrive Time</th>
+                        <th>Depart</th>
+                        <th>Depart Time</th>
+                        <th>Arrive</th>
+                        <th>Arrive Time</th>
+                        <th>Bus Layout</th>
+    
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <!--
+                    <tr class="none">
+    
+                        <td style="empty-cells: hide;"></td>
+                        <td style="empty-cells: hide;"></td>
+                        <td style="empty-cells: hide;"></td>
+                        <td style="empty-cells: hide;"></td>
+                        <td style="empty-cells: hide;"></td>
+                        <td style="empty-cells: hide;"></td>
+                        <td style="empty-cells: hide;"></td>
+                        <td style="empty-cells: hide;"></td>
+                        <td style="empty-cells: hide;"></td>
+                         <td style="empty-cells: hide;"></td>
+    
+                    </tr>
+                    -->
+    
+                
+                    <tr>
+    
+                        <td data-label="Bus No.">1</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Metro Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Metro Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">29-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+                        
+                        <td data-label="Bus No.">2</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Metro Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Bataan</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Bataan</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Metro Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">50-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">3</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Batangas</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Batangas</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">29-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">4</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Bulacan</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Bulacan</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">50-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">5</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Cavite</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Cavite</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">29-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">6</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Laguna</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Laguna</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">50-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">7</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">La Union</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">La Union</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">29-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+                        
+                        <td data-label="Bus No.">8</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Tarlac</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Tarlac</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">50-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">9</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Pampanga</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Pampanga</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">29-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">10</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Pangasinan</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Pangasinan</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">50-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">11</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Quezon</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Quezon</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">29-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">12</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Rizal</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Rizal</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">50-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">13</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Subic</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Subic</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">29-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">14</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Zambales</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Zambales</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">50-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">15</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Nueva Ecija</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Nueva Ecija</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">29-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">16</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Dagupan</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Dagupan</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">50-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">17</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Vigan</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Vigan</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">29-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+                        
+                        <td data-label="Bus No.">18</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Pagudpud</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Pagudpud</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">50-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">19</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Alaminos</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Alaminos</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">29-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">20</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Bolinao</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Bolinao</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">50-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">21</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Banaue</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Banaue</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">29-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">22</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Baler</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Baler</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">50-Seat</td>
+    
+                    </tr>
+    
+                    
+                    <tr>
+    
+                        <td data-label="Bus No.">23</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Sorsogon</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Sorsogon</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">29-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">24</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Naga</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Naga</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">50-Seat</td>
+    
+                    </tr>
+    
+                    <tr>
+    
+                        <td data-label="Bus No.">25</td>
+                        <td data-label="Bus Name">Ceres</td>
+                        <td data-label="Depart">Manila</td>
+                        <td data-label="Depart Time">8:00am</td>
+                        <td data-label="Arrive">Legazpi</td>
+                        <td data-label="Arrive Time">8:00am</td>
+                        <td data-label="Depart">Legazpi</td>
+                        <td data-label="Depart Time">9:00am</td>
+                        <td data-label="Arrive">Manila</td>
+                        <td data-label="Arrive Time">10:00am</td>
+                        <td data-label="Bus Layout">29-Seat</td>
+    
+                    </tr>
+                </tbody>
+    
+    
+                </table>
+    
+            </div>
+
+            <div id="noResults1">
+    
+                <div class="no-results">
+    
+                    <h2>No result Found</h2>
+    
+                </div>
+    
+            </div>
+  
+
+       
+    
+        </div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/intro.min.js"></script>
+
+<script src="schedule.js"></script>
+</html>

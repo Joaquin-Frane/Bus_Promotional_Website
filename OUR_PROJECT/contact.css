@@ -1,0 +1,5328 @@
+*,
+*::before,
+*::after{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    scrollbar-width:thin; 
+    
+
+ 
+    
+
+    /*
+     outline: 1px solid limegreen;
+     */
+    
+}
+body{
+
+    margin: 0;
+    padding: 0;
+    background-image: url(BackgroundImg/contactImg.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family:  'Times New Roman', Times, serif;
+
+}
+.wrapper{
+
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+    grid-template-areas: 
+    
+            "navbar"
+            "header"
+            "search"
+            "contacts"
+            "noResults1"
+            
+        
+    ;
+    user-select: none;
+
+
+}
+.navbar{
+
+    grid-area: navbar;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 1.7rem 0rem 1.7rem 0rem;
+    place-content: center;
+    text-align: center;
+    background: transparent;
+    backdrop-filter: blur(20rem);
+    box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.93);
+    
+
+}
+.navbar a{
+
+
+
+    margin: 0rem 7rem;
+    padding: 0.55rem 1.5rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border-radius: 0.6rem;
+    color: rgba(255, 255, 255, 0.921);
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,1);
+    text-shadow: 0px 1px 2px rgba(0,0,0,1);
+    transition: 0.7s ease;
+}
+.navbar a:hover{
+
+    color: #26f6fddc;
+    box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+
+}
+.header{
+
+    grid-area: header;
+    text-align: center;
+    place-self: center;
+}
+.header h1{
+
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.952);
+    padding: .3rem 1.4rem;
+    margin: 10rem 0rem 0rem 0rem;
+    background: transparent;
+    backdrop-filter: blur(2rem);
+    border-radius: 2rem;
+    box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+    border: 0.2rem solid rgba(255, 255, 255, 0.371);
+}
+.search{
+
+    grid-area: search;
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+}
+.searchbar-here{
+
+    display: flex;
+    place-self: center;
+    cursor: pointer;
+    margin: 3rem 0rem 2rem 0rem;
+    padding: .6rem .6rem;
+    background: rgba(100, 111, 154, 0.534);
+    box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+    backdrop-filter: blur(100rem);
+    border-radius: 4rem;
+    align-items: center;
+
+}
+.searchbar-here:hover input{
+
+   width: 25rem;
+
+}
+.searchbar-here input{
+
+    width: 0rem;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition:0.8s;
+    background: transparent;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+
+}
+.searchbar-here a .fast{
+
+    color: white;
+    font-size: 18px;
+
+}
+.searchbar-here i{
+
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.86);
+    justify-items: center;
+
+
+}
+::-webkit-input-placeholder{
+
+    color: rgb(255, 255, 255);
+    transition: .5s ease-out; 
+
+}
+.contacts{
+
+    grid-area: contacts;
+    height: 55dvh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-column-gap: 1rem;
+    grid-row-gap: 4rem;
+    margin: -0.5rem 0rem 0rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+    overflow: hidden;
+    overflow-y: scroll;
+
+
+
+}
+.contact-items{
+
+    place-self: center;
+    max-width: 21rem;
+    margin: 1rem 0rem 1rem 0rem;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgba(44, 21, 80, 0.76);
+    box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+    border-radius: 2rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.612);
+
+}
+.contact-items img{
+
+    max-width: 80%;
+    object-fit: cover;
+    border-radius: 2rem;
+    background-color: rgba(6, 11, 11, 0.5);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+    border: 0.2rem solid rgba(242, 241, 241, 0.992);
+    filter: brightness(95%);
+    
+}
+.contact-items h2{
+
+    margin: 1rem 0rem 0.4rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+    font-size: 1.04rem;
+    color: rgba(223, 234, 20, 0.951);
+}
+.contact-items h3{
+
+    margin: 1rem 0rem 0.4rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+    font-size: 1rem;
+    color: rgb(195, 238, 54);
+    font-style: italic;
+}
+.contact-items h4{
+
+    margin: 1rem 0rem 0.4rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+    font-size: 1.1rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.867);
+    text-decoration: underline;
+}
+.contact-items:nth-child(7) {
+    grid-column: 1 / -1; /* This makes the item span across all columns */
+    text-align: center; /* Center the text inside the item */
+}
+#no-results {
+
+   
+    grid-area: no-results;
+    position: fixed;
+    display: none; 
+    color: white; 
+    overflow: hidden;
+    place-self: center;
+    justify-content: center;
+    margin: 12rem 0rem 0rem 0rem;
+    background: rgba(100, 111, 154, 0.534);
+    box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+    border: 0.1rem solid white;
+    backdrop-filter: blur(100rem);
+    border-radius: 4rem;
+    
+}
+#no-results h2{
+
+    font-size: 1.8rem;
+    padding: 0.5rem 2rem;
+    margin: 0rem 0rem 0rem 0rem;
+}
+.introjs-overlay{
+
+    opacity: 20rem;
+
+}
+.introjs-tooltip {
+
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0.4rem 1.5rem;
+    border-radius: 2rem;
+    border: 0.1rem solid white;
+    background: transparent;
+    box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+    backdrop-filter: blur(2rem);
+    filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+
+}
+  .introjs-tooltiptext {
+
+    margin: -0.1rem 0rem 0.2rem 0rem;
+    padding: 1rem 1rem 0rem 1rem;
+    font-size: 1.1rem; 
+    line-height: 1.7rem;
+    font-style: italic;
+    text-align: justify;
+    text-align-last:center ;
+    color: #e0e0e0; 
+
+}
+  .introjs-tooltip-title{
+
+    margin: 0.7rem 0rem 0rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+    font-size: 1.27rem;
+    place-self: center;
+    text-align: center;
+    color: white;
+
+}
+
+.introjs-tooltip-header a{
+
+    margin: 0rem -0.6rem 0rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+    font-size: 1.44rem;
+    color: white;
+    border-radius: 1rem;
+    transition: 0.7s ease;
+
+}
+.introjs-tooltip-header a:hover{
+
+    color: rgb(170, 170, 218);
+
+}
+.introjs-helperLayer{
+
+    border: 1px solid white;
+    border-radius: 1.2rem;
+    
+}
+
+.introjs-button {
+
+    margin: 0.4rem 0rem 0.3rem 0rem;
+    padding: 0.5rem 1.4rem;
+    font-size: 1rem;
+    border-radius: 1rem; 
+    color: #ffffff; 
+    border: 0.1rem solid white;
+    background-color: rgba(150, 21, 21, 0.745);
+    filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    transition: 0.7s ease;
+    text-shadow: none;
+
+}
+  .introjs-button:hover {
+
+    background-color: rgba(12, 84, 50, 0.474);
+    scale: 1.05;
+    color: white;
+    text-shadow: 0rem 0rem 0rem 0rem #000f;
+
+}
+.introjs-button:focus {
+
+    outline: none; 
+    box-shadow: none; 
+    border: 0.1rem solid white;
+
+}
+@media screen and (width >= 343px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.3rem 0rem 1.4rem 0rem;
+        place-content: center;
+        text-align: center;
+  
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 0.5rem;
+        padding: 0.5rem 0.7rem;
+        font-size: .85rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        color: rgba(255, 255, 255, 0.841);
+        border: 1px solid rgba(255, 255, 255, 0.522);
+      
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 1.7rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .3rem 1.5rem;
+        margin: 7.5rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2rem 0rem 2rem 0rem;
+        padding: .5rem .6rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 17rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: .9rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 67dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 4rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 18rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.8rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+
+  
+
+}
+@media screen and (width >= 359px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.3rem 0rem 1.4rem 0rem;
+        place-content: center;
+        text-align: center;
+  
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 0.5rem;
+        padding: 0.5rem 0.7rem;
+        font-size: .85rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        color: rgba(255, 255, 255, 0.841);
+        border: 1px solid rgba(255, 255, 255, 0.522);
+      
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 1.7rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .3rem 1.2rem;
+        margin: 8rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2rem 0rem 2rem 0rem;
+        padding: .5rem .6rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 17rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: .9rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 60dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 4rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 18rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.8rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+
+  
+
+}
+@media screen and (width >= 374px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.3rem 0rem 1.4rem 0rem;
+        place-content: center;
+        text-align: center;
+  
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 0.7rem;
+        padding: 0.5rem 0.7rem;
+        font-size: .85rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        color: rgba(255, 255, 255, 0.841);
+        border: 1px solid rgba(255, 255, 255, 0.522);
+      
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 1.7rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .3rem 1.5rem;
+        margin: 7.5rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2rem 0rem 2rem 0rem;
+        padding: .5rem .6rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 17rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: .9rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 60dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 4rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 17rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.8rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+
+  
+
+}
+@media screen and (width >= 389px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.3rem 0rem 1.4rem 0rem;
+        place-content: center;
+        text-align: center;
+  
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 0.8rem;
+        padding: 0.5rem 0.7rem;
+        font-size: .85rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        color: rgba(255, 255, 255, 0.841);
+        border: 1px solid rgba(255, 255, 255, 0.522);
+      
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 1.7rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .3rem 1.5rem;
+        margin: 7.5rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2rem 0rem 2rem 0rem;
+        padding: .5rem .6rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 17rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: .9rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 64dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 17rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.8rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+
+  
+
+}
+@media screen and (width >= 411px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.3rem 0rem 1.4rem 0rem;
+        place-content: center;
+        text-align: center;
+  
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 1rem;
+        padding: 0.5rem 0.7rem;
+        font-size: .85rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        color: rgba(255, 255, 255, 0.841);
+        border: 1px solid rgba(255, 255, 255, 0.522);
+      
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 1.7rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .3rem 1.5rem;
+        margin: 7.5rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2rem 0rem 2rem 0rem;
+        padding: .5rem .6rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 17rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: .9rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 68dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 17rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.8rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+
+  
+
+}
+@media screen and (width >= 413px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.3rem 0rem 1.4rem 0rem;
+        place-content: center;
+        text-align: center;
+  
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 1rem;
+        padding: 0.5rem 0.7rem;
+        font-size: .85rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        color: rgba(255, 255, 255, 0.841);
+        border: 1px solid rgba(255, 255, 255, 0.522);
+      
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 1.7rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .3rem 1.5rem;
+        margin: 7.5rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2rem 0rem 2rem 0rem;
+        padding: .5rem .6rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 17rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: .9rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 69dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 17rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.8rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+
+  
+
+}
+@media screen and (width >= 429px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.3rem 0rem 1.4rem 0rem;
+        place-content: center;
+        text-align: center;
+  
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 1.1rem;
+        padding: 0.5rem 0.7rem;
+        font-size: .89rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        color: rgba(255, 255, 255, 0.841);
+        border: 1px solid rgba(255, 255, 255, 0.522);
+      
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 1.7rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .3rem 1.5rem;
+        margin: 7.5rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2rem 0rem 2rem 0rem;
+        padding: .5rem .6rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 17rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: .9rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 69dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 17rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.8rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+
+  
+
+}
+@media screen and (width >= 539px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.3rem 0rem 1.4rem 0rem;
+        place-content: center;
+        text-align: center;
+  
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 1.3rem;
+        padding: 0.5rem 1.2rem;
+        font-size: 1rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        color: rgba(255, 255, 255, 0.841);
+        border: 1px solid rgba(255, 255, 255, 0.522);
+      
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 1.7rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .3rem 1.5rem;
+        margin: 7.5rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2rem 0rem 2rem 0rem;
+        padding: .5rem .6rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 17rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: .9rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 62dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 16rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.8rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+  
+
+}
+@media screen and (width >= 767px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.6rem 0rem 1.6rem 0rem;
+        place-content: center;
+        text-align: center;
+  
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 2rem;
+        padding: 0.5rem 1.3rem;
+        font-size: 1.7rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        color: rgba(255, 255, 255, 0.841);
+        border: 1px solid rgba(255, 255, 255, 0.522);
+      
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 2.1rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .3rem 1.5rem;
+        margin: 10rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2rem 0rem 2rem 0rem;
+        padding: .5rem .6rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 22rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: .99rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.4rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 66dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 17rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.8rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+  
+
+}
+@media screen and (width >= 819px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.6rem 0rem 1.6rem 0rem;
+        place-content: center;
+        text-align: center;
+  
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 2.2rem;
+        padding: 0.5rem 1.3rem;
+        font-size: 1.8rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        color: rgba(255, 255, 255, 0.841);
+        border: 1px solid rgba(255, 255, 255, 0.522);
+      
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 2.4rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .3rem 1.5rem;
+        margin: 13rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2.5rem 0rem 2rem 0rem;
+        padding: .5rem .6rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 24rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: 1.3rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.6rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 60dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 16rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.8rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+  
+
+}
+@media screen and (width >= 852px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.6rem 0rem 1.6rem 0rem;
+        place-content: center;
+        text-align: center;
+  
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 2.4rem;
+        padding: 0.5rem 1.14rem;
+        font-size: 2rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        color: rgba(255, 255, 255, 0.841);
+        border: 1px solid rgba(255, 255, 255, 0.522);
+      
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 2.6rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .3rem 1.5rem;
+        margin: 13rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2.5rem 0rem 2.5rem 0rem;
+        padding: .6rem .7rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 24rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: 1.3rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.8rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 54dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 16rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.8rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+    
+}
+@media screen and (width >= 911px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.6rem 0rem 1.6rem 0rem;
+        place-content: center;
+        text-align: center;
+  
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 2.4rem;
+        padding: 0.5rem 1.6rem;
+        font-size: 2rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        color: rgba(255, 255, 255, 0.841);
+        border: 1px solid rgba(255, 255, 255, 0.522);
+      
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 2.6rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .4rem 1.7rem;
+        margin: 13rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2.7rem 0rem 2rem 0rem;
+        padding: .5rem .6rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 26rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: 1.4rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.8rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 54dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 17rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.8rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+    
+}
+@media screen and (width >= 1023px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.6rem 0rem 1.7rem 0rem;
+        place-content: center;
+        text-align: center;
+  
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 2.5rem;
+        padding: 0.5rem 1.7rem;
+        font-size: 2.4rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        color: rgba(255, 255, 255, 0.841);
+        border: 1px solid rgba(255, 255, 255, 0.522);
+      
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 3rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .5rem 1.7rem;
+        margin: 13rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2.7rem 0rem 2.7rem 0rem;
+        padding: .6rem .7rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 26rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: 1.4rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 2.1rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 54dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 17rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.8rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+    
+}
+@media screen and (width >= 1365px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 0.5fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.4rem 0rem 1.4rem 0rem;
+        place-content: center;
+        text-align: center;
+        background: transparent;
+        backdrop-filter: blur(20rem);
+        box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.93);
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 6rem;
+        padding: 0.55rem 1.6rem;
+        font-size: 1.4rem;
+        text-decoration: none;
+        border-radius: 0.6rem;
+        color: rgba(255, 255, 255, 0.921);
+        border: 0px solid white;
+        box-shadow: 5px 5px 10px 1px rgba(0,0,0,1);
+        text-shadow: 0px 1px 2px rgba(0,0,0,1);
+        transition: 0.7s ease;
+    
+    }
+    .navbar a:hover{
+    
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 1.58rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .5rem 1.7rem;
+        margin: 8rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 1.7rem 0rem 1.4rem 0rem;
+        padding: .45rem .6rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 22rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: .9rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.02rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 57dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 15rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .7rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .8rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 9rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.5rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 0.8rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem 0rem 0rem -.3rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: .7rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+    .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+    
+}
+@media screen and (width >= 1535px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.7rem 0rem 1.7rem 0rem;
+        place-content: center;
+        text-align: center;
+        background: transparent;
+        backdrop-filter: blur(20rem);
+        box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.93);
+        
+    
+    }
+    .navbar a{
+    
+    
+    
+        margin: 0rem 7rem;
+        padding: 0.55rem 1.5rem;
+        font-size: 1.6rem;
+        text-decoration: none;
+        border-radius: 0.6rem;
+        color: rgba(255, 255, 255, 0.921);
+        box-shadow: 5px 5px 10px 1px rgba(0,0,0,1);
+        text-shadow: 0px 1px 2px rgba(0,0,0,1);
+        transition: 0.7s ease;
+    }
+    .navbar a:hover{
+    
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+    
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 2rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .3rem 1.4rem;
+        margin: 11rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 2rem 0rem 2rem 0rem;
+        padding: .6rem .6rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 25rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: 1rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 55dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 4rem;
+        margin: -0.8rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 19rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: .9rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.1rem;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 1.6rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0.4rem 1.5rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+        background: transparent;
+        box-shadow: 0px 0px 1px 1px rgb(255, 255, 255);
+        backdrop-filter: blur(2rem);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+    
+    }
+      .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 1rem 0rem 1rem;
+        font-size: 1.1rem; 
+        line-height: 1.7rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+        color: #e0e0e0; 
+    
+    }
+      .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.27rem;
+        place-self: center;
+        text-align: center;
+        color: white;
+    
+    }
+    
+    .introjs-tooltip-header a{
+    
+        margin: 0rem -0.6rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.44rem;
+        color: white;
+        border-radius: 1rem;
+        transition: 0.7s ease;
+    
+    }
+    .introjs-tooltip-header a:hover{
+    
+        color: rgb(170, 170, 218);
+    
+    }
+    .introjs-helperLayer{
+    
+        border: 1px solid white;
+        border-radius: 1.2rem;
+        
+    }
+    
+    .introjs-button {
+    
+        margin: 0.4rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: 1rem;
+        border-radius: 1rem; 
+        color: #ffffff; 
+        border: 0.1rem solid white;
+        background-color: rgba(150, 21, 21, 0.745);
+        filter: drop-shadow(1px 0px 1px rgba(86, 97, 177, 0.781));
+        transition: 0.7s ease;
+        text-shadow: none;
+    
+    }
+      .introjs-button:hover {
+    
+        background-color: rgba(12, 84, 50, 0.474);
+        scale: 1.05;
+        color: white;
+        text-shadow: 0rem 0rem 0rem 0rem #000f;
+    
+    }
+    .introjs-button:focus {
+    
+        outline: none; 
+        box-shadow: none; 
+        border: 0.1rem solid white;
+    
+    }
+    
+}
+@media screen and (width >= 1919px){
+
+    .wrapper{
+
+        height: 100dvh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-areas: 
+        
+                "navbar"
+                "header"
+                "search"
+                "contacts"
+                "noResults1"
+                
+            
+        ;
+        user-select: none;
+    
+    
+    }
+    .navbar{
+    
+        grid-area: navbar;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.9rem 0rem 1.9rem 0rem;
+        place-content: center;
+        text-align: center;
+    
+    }
+    .navbar a{
+    
+        margin: 0rem 8rem;
+        padding: 0.74rem 2.4rem;
+        font-size: 2rem;
+        text-decoration: none;
+        
+    }
+    .navbar a:hover{
+
+        color: #26f6fddc;
+        box-shadow: -1px -4px 5px 3px rgba(0,0,0,0.63);
+    
+    }
+    .header{
+    
+        grid-area: header;
+        text-align: center;
+        place-self: center;
+    }
+    .header h1{
+    
+        font-size: 2.7rem;
+        color: rgba(255, 255, 255, 0.952);
+        padding: .4rem 1.8rem;
+        margin: 14rem 0rem 0rem 0rem;
+        background: transparent;
+        backdrop-filter: blur(2rem);
+        border-radius: 2rem;
+        box-shadow: 0px 14px 5px -1px rgba(0,0,0,0.89);
+        border: 0.2rem solid rgba(255, 255, 255, 0.371);
+    }
+    .search{
+    
+        grid-area: search;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .searchbar-here{
+    
+        display: flex;
+        place-self: center;
+        cursor: pointer;
+        margin: 3rem 0rem 3rem 0rem;
+        padding: .66rem .8rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        align-items: center;
+    
+    }
+    .searchbar-here:hover input{
+    
+       width: 30rem;
+    
+    }
+    .searchbar-here input{
+    
+        width: 0rem;
+        outline: none;
+        border: none;
+        font-weight: 500;
+        transition:0.8s;
+        background: transparent;
+        text-align: center;
+        color: white;
+        font-size: 1.33rem;
+    
+    }
+    .searchbar-here a .fast{
+    
+        color: white;
+        font-size: 18px;
+    
+    }
+    .searchbar-here i{
+    
+        font-size: 1.7rem;
+        color: rgba(255, 255, 255, 0.86);
+        justify-items: center;
+    
+    
+    }
+    ::-webkit-input-placeholder{
+    
+        color: rgb(255, 255, 255);
+        transition: .5s ease-out; 
+    
+    }
+    .contacts{
+    
+        grid-area: contacts;
+        height: 50dvh;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(470px,1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 6rem;
+        margin: -0.5rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        overflow: hidden;
+        overflow-y: scroll;
+    
+    
+    
+    }
+    .contact-items{
+    
+        place-self: center;
+        max-width: 23rem;
+        margin: 1rem 0rem 1rem 0rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        border: 1px solid black;
+        background-color: rgba(44, 21, 80, 0.76);
+        box-shadow: 0px 12px 5px -2px rgba(0,0,0,0.96);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.612);
+    
+    }
+    .contact-items img{
+    
+        max-width: 80%;
+        object-fit: cover;
+        border-radius: 2rem;
+        background-color: rgba(6, 11, 11, 0.5);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+        border: 0.2rem solid rgba(242, 241, 241, 0.992);
+        filter: brightness(95%);
+        
+    }
+    .contact-items h2{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.15rem;
+        color: rgba(223, 234, 20, 0.951);
+    }
+    .contact-items h3{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.2rem;
+        color: rgb(195, 238, 54);
+        font-style: italic;
+    }
+    .contact-items h4{
+    
+        margin: 1rem 0rem 0.4rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.2rem;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.867);
+        text-decoration: underline;
+    }
+    .contact-items:nth-child(7) {
+        grid-column: 1 / -1; /* This makes the item span across all columns */
+        text-align: center; /* Center the text inside the item */
+    }
+    #no-results {
+    
+       
+        grid-area: no-results;
+        position: fixed;
+        display: none; 
+        color: white; 
+        overflow: hidden;
+        place-self: center;
+        justify-content: center;
+        margin: 12rem 0rem 0rem 0rem;
+        background: rgba(100, 111, 154, 0.534);
+        box-shadow: -1px 20px 11px 0px rgba(0,0,0,0.75);
+        border: 0.1rem solid white;
+        backdrop-filter: blur(100rem);
+        border-radius: 4rem;
+        
+    }
+    #no-results h2{
+    
+        font-size: 2.2rem;
+        padding: 0.5rem 2rem;
+        margin: 0rem 0rem 0rem 0rem;
+    }
+    .introjs-overlay{
+    
+        opacity: 20rem;
+    
+    }
+    .introjs-tooltip {
+    
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 0.4rem 1.5rem;
+        border-radius: 2rem;
+        border: 0.1rem solid white;
+    
+    }
+    .introjs-tooltiptext {
+    
+        margin: -0.1rem 0rem 0.2rem 0rem;
+        padding: 1rem 0rem 0rem 0rem;
+        font-size: 1.21rem; 
+        line-height: 1.9rem;
+        font-style: italic;
+        text-align: justify;
+        text-align-last:center ;
+    
+    }
+    .introjs-tooltip-title{
+    
+        margin: 0.7rem 0rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 1.55rem;
+        place-self: center;
+        text-align: center;
+    
+    }
+    .introjs-tooltip-header a{
+    
+        margin: 0rem -0.6rem 0rem 0rem;
+        padding: 0rem 0rem 0rem 0rem;
+        font-size: 2rem;
+    
+    }
+    .introjs-button {
+    
+        margin: 0.5rem 0rem 0.3rem 0rem;
+        padding: 0.5rem 1.4rem;
+        font-size: 1.1rem;
+        border-radius: 1rem; 
+        
+    }
+
+    
+}
